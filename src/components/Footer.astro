@@ -1,0 +1,38 @@
+---
+import { t, type Lang } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-text">
+      &copy; {year} &middot; {t(lang, 'footer.builtWith')} Astro {t(lang, 'footer.and')} <span class="heart">&hearts;</span> {t(lang, 'footer.by')}
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: var(--space-md) 0;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .footer-inner {
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .heart {
+    color: var(--color-accent);
+  }
+</style>

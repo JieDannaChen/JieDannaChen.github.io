@@ -1,0 +1,205 @@
+---
+import { t, type Lang } from '../i18n/translations';
+import { projects } from '../data/projects';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<section class="projects-section" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <h2>{t(lang, 'projects.title')}</h2>
+      <div class="divider"></div>
+      <p>{t(lang, 'projects.subtitle')}</p>
+    </div>
+
+    <div class="projects-list">
+      {projects.map((project, i) => (
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-image-placeholder" data-index={i}>
+              <span class="placeholder-icon">{['💬', '👁️', '🤖'][i]}</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>{project.title[lang]}</h3>
+            <p class="project-desc">{project.description[lang]}</p>
+            <div class="project-tags">
+              {project.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+            <div class="project-links">
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener" class="project-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                  {t(lang, 'projects.viewCode')}
+                </a>
+              )}
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noopener" class="project-link demo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  {t(lang, 'projects.viewDemo')}
+                </a>
+              )}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .project-card {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-md);
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+  }
+
+  .project-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .project-card:nth-child(even) {
+    direction: rtl;
+  }
+
+  .project-card:nth-child(even) > * {
+    direction: ltr;
+  }
+
+  .project-image {
+    height: 100%;
+    min-height: 240px;
+  }
+
+  .project-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+  }
+
+  .project-image-placeholder[data-index="0"] {
+    background: linear-gradient(135deg, #e8efe6 0%, #d4e4cf 100%);
+  }
+  .project-image-placeholder[data-index="1"] {
+    background: linear-gradient(135deg, #e6edf4 0%, #cfd9e8 100%);
+  }
+  .project-image-placeholder[data-index="2"] {
+    background: linear-gradient(135deg, #f0ebe4 0%, #e2d8cb 100%);
+  }
+
+  .project-info {
+    padding: var(--space-md) var(--space-md) var(--space-md) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-card:nth-child(even) .project-info {
+    padding: var(--space-md) 0 var(--space-md) var(--space-md);
+  }
+
+  .project-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text);
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-secondary);
+    max-width: none;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: var(--space-sm);
+  }
+
+  .tag {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    border-radius: 12px;
+    letter-spacing: 0.02em;
+  }
+
+  .project-links {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+    padding: 4px 0;
+  }
+
+  .project-link:hover {
+    color: var(--color-accent);
+  }
+
+  .project-link.demo {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    .project-card {
+      grid-template-columns: 1fr;
+    }
+
+    .project-card:nth-child(even) {
+      direction: ltr;
+    }
+
+    .project-image {
+      min-height: 180px;
+    }
+
+    .project-info,
+    .project-card:nth-child(even) .project-info {
+      padding: 0 var(--space-md) var(--space-md) var(--space-md);
+    }
+  }
+</style>

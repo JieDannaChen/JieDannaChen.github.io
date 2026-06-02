@@ -1,0 +1,179 @@
+---
+import { t, type Lang } from '../i18n/translations';
+import { skills, interests } from '../data/skills';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const categories = [
+  { key: 'ai', label: 'AI / ML' },
+  { key: 'language', label: 'Languages' },
+  { key: 'framework', label: 'Frameworks' },
+  { key: 'tool', label: 'Tools' },
+] as const;
+---
+
+<section class="skills-section" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <h2>{t(lang, 'skills.title')}</h2>
+      <div class="divider"></div>
+      <p>{t(lang, 'skills.subtitle')}</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skills-card">
+        <h3>{t(lang, 'skills.technical')}</h3>
+        {categories.map((cat) => (
+          <div class="skill-category">
+            <span class="category-label">{cat.label}</span>
+            <div class="skill-tags">
+              {skills
+                .filter((s) => s.category === cat.key)
+                .map((skill) => (
+                  <span class="skill-tag">
+                    <span class="skill-icon">{skill.icon}</span>
+                    {skill.name}
+                  </span>
+                ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="interests-card">
+        <h3>{t(lang, 'skills.interests')}</h3>
+        <div class="interests-list">
+          {interests.map((item) => (
+            <div class="interest-item">
+              <span class="interest-icon">{item.icon}</span>
+              <div>
+                <strong>{item.name[lang]}</strong>
+                <p>{item.description[lang]}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-section {
+    background: var(--color-bg-alt);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .skills-card,
+  .interests-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .skills-card h3,
+  .interests-card h3 {
+    font-family: var(--font-serif);
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+
+  .skill-category {
+    margin-bottom: var(--space-md);
+  }
+
+  .skill-category:last-child {
+    margin-bottom: 0;
+  }
+
+  .category-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-light);
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: all var(--transition);
+  }
+
+  .skill-tag:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-1px);
+  }
+
+  .skill-icon {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .interests-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .interest-item {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: flex-start;
+  }
+
+  .interest-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .interest-item strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+  }
+
+  .interest-item p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

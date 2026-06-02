@@ -1,0 +1,165 @@
+---
+import { t, type Lang } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<section class="hero" id="about">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <p class="hero-greeting animate-in">{t(lang, 'hero.greeting')}</p>
+      <h1 class="hero-name animate-in delay-1">{t(lang, 'hero.name')}</h1>
+      <p class="hero-tagline animate-in delay-2">{t(lang, 'hero.tagline')}</p>
+      <p class="hero-desc animate-in delay-3">{t(lang, 'hero.description')}</p>
+      <a href="#projects" class="hero-cta animate-in delay-4">
+        {t(lang, 'hero.cta')}
+        <span class="arrow">&darr;</span>
+      </a>
+    </div>
+    <div class="hero-visual animate-in delay-2">
+      <div class="avatar-frame">
+        <div class="avatar-placeholder">
+          <span>JC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .hero-greeting {
+    font-size: 1.05rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-xs);
+  }
+
+  .hero-name {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-tagline {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-lg);
+    max-width: 50ch;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border: 1.5px solid var(--color-accent);
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: all var(--transition);
+    letter-spacing: 0.02em;
+  }
+
+  .hero-cta:hover {
+    background: var(--color-accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 103, 65, 0.2);
+  }
+
+  .arrow {
+    transition: transform var(--transition);
+  }
+
+  .hero-cta:hover .arrow {
+    transform: translateY(3px);
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .avatar-frame {
+    position: relative;
+  }
+
+  .avatar-frame::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 1.5px solid var(--color-border);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+  }
+
+  @keyframes rotate {
+    to { transform: rotate(360deg); }
+  }
+
+  .avatar-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-bg-alt) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-name { font-size: 2.4rem; }
+    .hero-desc { max-width: none; margin-left: auto; margin-right: auto; }
+    .hero-visual { order: -1; }
+
+    .avatar-placeholder {
+      width: 150px;
+      height: 150px;
+      font-size: 2.2rem;
+    }
+  }
+</style>

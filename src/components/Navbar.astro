@@ -1,0 +1,184 @@
+---
+import { t, type Lang, languages } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const otherLang: Lang = lang === 'en' ? 'zh' : 'en';
+const otherLangPath = otherLang === 'en' ? '/' : '/zh/';
+---
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href={lang === 'en' ? '/' : '/zh/'} class="nav-logo">
+      <span class="logo-text">JC</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about">{t(lang, 'nav.about')}</a>
+      <a href="#skills">{t(lang, 'nav.skills')}</a>
+      <a href="#projects">{t(lang, 'nav.projects')}</a>
+      <a href="#contact">{t(lang, 'nav.contact')}</a>
+      <a href={otherLangPath} class="lang-switch" title={`Switch to ${languages[otherLang]}`}>
+        {languages[otherLang]}
+      </a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">{t(lang, 'nav.about')}</a>
+  <a href="#skills">{t(lang, 'nav.skills')}</a>
+  <a href="#projects">{t(lang, 'nav.projects')}</a>
+  <a href="#contact">{t(lang, 'nav.contact')}</a>
+  <a href={otherLangPath} class="lang-switch">{languages[otherLang]}</a>
+</div>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: var(--space-sm) 0;
+    background: rgba(250, 249, 247, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition);
+  }
+
+  .navbar.scrolled {
+    border-bottom-color: var(--color-border-light);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    text-decoration: none;
+  }
+
+  .logo-text {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-text);
+  }
+
+  .lang-switch {
+    padding: 4px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    font-size: 0.82rem !important;
+    transition: all var(--transition) !important;
+  }
+
+  .lang-switch:hover {
+    background: var(--color-accent);
+    color: white !important;
+    border-color: var(--color-accent);
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 1px;
+    transition: var(--transition);
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: rgba(250, 249, 247, 0.98);
+    backdrop-filter: blur(12px);
+    padding: var(--space-md);
+    flex-direction: column;
+    gap: var(--space-sm);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .mobile-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: var(--space-xs) 0;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+  }
+</style>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+
+  window.addEventListener('scroll', () => {
+    navbar?.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('open');
+  });
+
+  menu?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => menu?.classList.remove('open'));
+  });
+</script>
