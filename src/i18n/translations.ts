@@ -30,10 +30,10 @@ export const translations = {
       interests: 'Areas of Exploration',
     },
     projects: {
-      title: 'Featured Work',
-      subtitle: 'Selected engineering initiatives that drove measurable impact',
-      viewCode: 'Learn More',
-      viewDemo: 'Case Study',
+      title: 'AI & Open Source Projects',
+      subtitle: 'Building tools at the intersection of AI, quality engineering, and real life',
+      viewCode: 'GitHub',
+      viewDemo: 'Demo',
     },
     achievements: {
       title: 'Achievements',
@@ -75,10 +75,10 @@ export const translations = {
       interests: '探索领域',
     },
     projects: {
-      title: '代表项目',
-      subtitle: '精选工程实践，每一项都带来了可量化的影响',
-      viewCode: '了解更多',
-      viewDemo: '案例研究',
+      title: 'AI & 开源项目',
+      subtitle: '在 AI、质量工程与真实生活的交汇处构建工具',
+      viewCode: 'GitHub',
+      viewDemo: '演示',
     },
     achievements: {
       title: '职业成就',
