@@ -4,18 +4,20 @@ import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
+import Achievements from '../components/Achievements.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 
 const lang = 'en' as const;
 ---
 
-<Layout title="Jie Chen (Danna) - AI Enthusiast & Software Engineer" lang="en">
+<Layout title="Danna Chen - Senior Principal Engineer · Quality & Storage" lang="en">
   <Navbar lang={lang} />
   <main>
     <Hero lang={lang} />
     <Skills lang={lang} />
     <Projects lang={lang} />
+    <Achievements lang={lang} />
     <Contact lang={lang} />
   </main>
   <Footer lang={lang} />

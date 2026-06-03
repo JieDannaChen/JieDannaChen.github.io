@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   icon: string;
-  category: 'language' | 'framework' | 'ai' | 'tool';
+  category: 'language' | 'framework' | 'testing' | 'infra';
 }
 
 export interface Interest {
@@ -11,51 +11,51 @@ export interface Interest {
 }
 
 export const skills: Skill[] = [
-  { name: 'Python', icon: '🐍', category: 'language' },
-  { name: 'TypeScript', icon: '📘', category: 'language' },
   { name: 'Java', icon: '☕', category: 'language' },
-  { name: 'PyTorch', icon: '🔥', category: 'ai' },
-  { name: 'TensorFlow', icon: '🧠', category: 'ai' },
-  { name: 'LangChain', icon: '🔗', category: 'ai' },
-  { name: 'React', icon: '⚛️', category: 'framework' },
-  { name: 'Node.js', icon: '🟢', category: 'framework' },
-  { name: 'Docker', icon: '🐳', category: 'tool' },
-  { name: 'Git', icon: '📂', category: 'tool' },
-  { name: 'Linux', icon: '🐧', category: 'tool' },
-  { name: 'AWS', icon: '☁️', category: 'tool' },
+  { name: 'Python', icon: '🐍', category: 'language' },
+  { name: 'Shell / Bash', icon: '💻', category: 'language' },
+  { name: 'Robot Framework', icon: '🤖', category: 'testing' },
+  { name: 'JUnit', icon: '✅', category: 'testing' },
+  { name: 'JaCoCo', icon: '📊', category: 'testing' },
+  { name: 'SonarQube', icon: '🔍', category: 'testing' },
+  { name: 'Jenkins', icon: '🔧', category: 'infra' },
+  { name: 'Docker / K8s', icon: '🐳', category: 'infra' },
+  { name: 'Ansible', icon: '📡', category: 'infra' },
+  { name: 'Git', icon: '📂', category: 'infra' },
+  { name: 'Linux', icon: '🐧', category: 'infra' },
 ];
 
 export const interests: Interest[] = [
   {
-    name: { en: 'Large Language Models', zh: '大语言模型' },
-    icon: '💬',
+    name: { en: 'Chaos Engineering', zh: '混沌工程' },
+    icon: '🌪️',
     description: {
-      en: 'Exploring prompt engineering, fine-tuning, and building applications with LLMs',
-      zh: '探索提示工程、模型微调以及基于 LLM 的应用开发',
+      en: 'Designing controlled fault-injection frameworks to validate system resilience and uncover hidden failure modes',
+      zh: '设计可控的故障注入框架，验证系统韧性并发现隐藏的失效模式',
     },
   },
   {
-    name: { en: 'Computer Vision', zh: '计算机视觉' },
-    icon: '👁️',
+    name: { en: 'AI-Augmented Testing', zh: 'AI 增强测试' },
+    icon: '🧠',
     description: {
-      en: 'Image recognition, object detection, and visual understanding systems',
-      zh: '图像识别、目标检测和视觉理解系统',
+      en: 'Leveraging LLMs and AI agents to automate test generation, log analysis, and root cause diagnosis',
+      zh: '利用大语言模型和 AI 智能体实现测试生成、日志分析和根因诊断的自动化',
     },
   },
   {
-    name: { en: 'AI Agents', zh: 'AI 智能体' },
-    icon: '🤖',
+    name: { en: 'Distributed Storage Systems', zh: '分布式存储系统' },
+    icon: '💾',
     description: {
-      en: 'Building autonomous agents that reason, plan, and take actions',
-      zh: '构建能够推理、规划和执行的自主智能体',
+      en: 'Deep expertise in enterprise-scale object storage — data durability, recovery, tiering, and performance optimization',
+      zh: '企业级对象存储深度专长 — 数据持久性、恢复、分层存储与性能优化',
     },
   },
   {
-    name: { en: 'Open Source', zh: '开源社区' },
-    icon: '🌐',
+    name: { en: 'Quality Transformation', zh: '质量转型' },
+    icon: '📈',
     description: {
-      en: 'Contributing to and learning from the open-source community',
-      zh: '参与开源社区，向社区学习和贡献',
+      en: 'Shifting left with component-level testing, coverage-driven optimization, and continuous quality feedback loops',
+      zh: '通过组件级测试、覆盖率驱动优化和持续质量反馈循环推动测试左移',
     },
   },
 ];

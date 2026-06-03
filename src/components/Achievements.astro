@@ -1,0 +1,307 @@
+---
+import { t, type Lang } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const stats = [
+  {
+    value: '15+',
+    label: { en: 'Years of Experience', zh: '年从业经验' },
+  },
+  {
+    value: '4',
+    label: { en: 'Patents Filed', zh: '项专利申请' },
+  },
+  {
+    value: '99.999%',
+    label: { en: 'System Availability', zh: '系统可用性' },
+  },
+  {
+    value: '80%',
+    label: { en: 'Defect Rate Reduction', zh: '缺陷率降低' },
+  },
+];
+
+const milestones = [
+  {
+    icon: '🏆',
+    title: { en: 'Hackathon Award', zh: '创新竞赛获奖' },
+    desc: {
+      en: 'Recognized for exceptional creativity and technical execution in a company-wide innovation competition',
+      zh: '在公司级创新竞赛中获得杰出创意与技术执行力表彰',
+    },
+  },
+  {
+    icon: '🎤',
+    title: { en: 'Conference Speaker', zh: '技术大会演讲者' },
+    desc: {
+      en: 'Delivered talks on enterprise storage quality practices at industry conferences',
+      zh: '在行业技术大会上分享企业级存储产品质量实践经验',
+    },
+  },
+  {
+    icon: '📜',
+    title: { en: 'Patent Inventor', zh: '专利发明人' },
+    desc: {
+      en: 'Filed multiple patents in distributed systems monitoring, cluster management, and health diagnostics',
+      zh: '在分布式系统监控、集群管理和健康诊断领域提交多项专利',
+    },
+  },
+  {
+    icon: '⭐',
+    title: { en: 'Quality Architect', zh: '质量架构师' },
+    desc: {
+      en: 'Acknowledged as quality architect and team enabler — driving testing transformation and mentoring engineers',
+      zh: '获认可为质量架构师与团队赋能者 — 推动测试转型并指导工程师成长',
+    },
+  },
+];
+
+const career = [
+  {
+    period: '2010 – 2016',
+    role: { en: 'Test Manager', zh: '测试经理' },
+    org: { en: 'Leading Internet Platform (HK-listed)', zh: '知名互联网平台（港股上市）' },
+    highlight: { en: 'Led 10+ project teams, 30 systems, DAU 350M', zh: '带领 10+ 项目团队，30 个系统，日活 3.5 亿' },
+  },
+  {
+    period: '2016 – 2017',
+    role: { en: 'QA Lead', zh: 'QA 负责人' },
+    org: { en: 'Logistics Tech Unicorn (NYSE-listed)', zh: '物流科技独角兽（纽交所上市）' },
+    highlight: { en: 'Built QA team from scratch; CI/CD release 3hrs → 15min', zh: '从零组建 QA 团队；CI/CD 发布 3 小时 → 15 分钟' },
+  },
+  {
+    period: '2017 – Present',
+    role: { en: 'Senior Principal Engineer', zh: '资深首席工程师' },
+    org: { en: 'Global Technology Leader', zh: '全球科技领军企业' },
+    highlight: { en: 'Founding QE team member; quality architect for enterprise storage', zh: 'QE 团队创始成员；企业存储质量架构师' },
+  },
+];
+---
+
+<section class="achievements-section" id="achievements">
+  <div class="container">
+    <div class="section-header">
+      <h2>{t(lang, 'achievements.title')}</h2>
+      <div class="divider"></div>
+      <p>{t(lang, 'achievements.subtitle')}</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      {stats.map((s) => (
+        <div class="stat-item">
+          <span class="stat-value">{s.value}</span>
+          <span class="stat-label">{s.label[lang]}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Career Timeline -->
+    <div class="career-timeline">
+      {career.map((c, i) => (
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">{c.period}</span>
+            <h3>{c.role[lang]}</h3>
+            <p class="timeline-org">{c.org[lang]}</p>
+            <p class="timeline-highlight">{c.highlight[lang]}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Milestones -->
+    <div class="milestones-grid">
+      {milestones.map((m) => (
+        <div class="milestone-card">
+          <span class="milestone-icon">{m.icon}</span>
+          <h3>{m.title[lang]}</h3>
+          <p>{m.desc[lang]}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .achievements-section {
+    background: var(--color-bg-alt);
+  }
+
+  /* Stats */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: var(--space-md);
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .stat-value {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  /* Timeline */
+  .career-timeline {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: var(--space-xl);
+  }
+
+  .career-timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--color-border);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: var(--space-md);
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -24px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-surface);
+    border: 2.5px solid var(--color-accent);
+  }
+
+  .timeline-item:last-child .timeline-dot {
+    background: var(--color-accent);
+  }
+
+  .timeline-content {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .timeline-period {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .timeline-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    margin: 2px 0 4px;
+    color: var(--color-text);
+  }
+
+  .timeline-org {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 4px;
+  }
+
+  .timeline-highlight {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* Milestones */
+  .milestones-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .milestone-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    border: 1px solid var(--color-border-light);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+  }
+
+  .milestone-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .milestone-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .milestone-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    color: var(--color-text);
+  }
+
+  .milestone-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .stats-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .milestones-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-value {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-row {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-sm);
+    }
+  }
+</style>
