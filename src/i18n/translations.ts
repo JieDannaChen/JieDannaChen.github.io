@@ -18,9 +18,9 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       name: 'Danna Chen',
-      tagline: 'Senior Principal Engineer · Quality & Storage',
+      tagline: 'Principal Engineer · Platform Architecture & AI Engineering',
       description:
-        '15+ years in quality engineering, test architecture, and distributed storage systems. I build automated testing frameworks, pioneer code coverage pipelines, and drive quality transformation across large-scale enterprise products. Passionate about chaos engineering, AI-augmented testing, and open-source community.',
+        '15 years building globally scalable platforms — from China\'s internet hyper-growth era (Meituan/Dianping, Full Truck Alliance) to enterprise distributed storage at Dell Technologies. Architected an enterprise AI platform (87 production skills, 10+ system integrations) adopted by a 200+ person engineering org. VP Star Award recipient. Competitive marathon runner who built Marathon Copilot — a full-stack AI coaching product combining sports science, LLM orchestration, and consumer product delivery.',
       cta: 'Explore My Work',
     },
     skills: {
@@ -63,9 +63,9 @@ export const translations = {
     hero: {
       greeting: '你好，我是',
       name: '陈洁 (Danna)',
-      tagline: '资深首席工程师 · 质量工程 & 分布式存储',
+      tagline: '首席工程师 · 平台架构 & AI 工程',
       description:
-        '15+ 年质量工程、测试架构与分布式存储系统经验。擅长构建自动化测试框架、开创代码覆盖率流水线，并推动大规模企业产品的质量转型。热衷于混沌工程、AI 增强测试和开源社区。',
+        '15 年全球化平台构建经验 — 从中国互联网高速增长时代（美团/大众点评、满帮集团）到 Dell Technologies 企业级分布式存储。主导构建企业 AI 平台（87 个生产技能、10+ 系统集成），被 200+ 人工程组织广泛采用。VP 年度之星奖获得者。热爱马拉松的跑者，打造了 Marathon Copilot — 融合运动科学、LLM 编排与消费级产品交付的全栈 AI 教练产品。',
       cta: '了解我的工作',
     },
     skills: {

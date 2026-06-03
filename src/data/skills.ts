@@ -11,51 +11,53 @@ export interface Interest {
 }
 
 export const skills: Skill[] = [
-  { name: 'Java', icon: '☕', category: 'language' },
   { name: 'Python', icon: '🐍', category: 'language' },
+  { name: 'Java', icon: '☕', category: 'language' },
+  { name: 'JavaScript / Node.js', icon: '🟨', category: 'language' },
+  { name: 'SQL', icon: '🗃️', category: 'language' },
   { name: 'Shell / Bash', icon: '💻', category: 'language' },
+  { name: 'LLM Orchestration', icon: '🧠', category: 'framework' },
+  { name: 'RAG & Embeddings', icon: '🔗', category: 'framework' },
+  { name: 'Prompt Engineering', icon: '✍️', category: 'framework' },
   { name: 'Robot Framework', icon: '🤖', category: 'testing' },
-  { name: 'JUnit', icon: '✅', category: 'testing' },
-  { name: 'JaCoCo', icon: '📊', category: 'testing' },
-  { name: 'SonarQube', icon: '🔍', category: 'testing' },
-  { name: 'Jenkins', icon: '🔧', category: 'infra' },
-  { name: 'Docker / K8s', icon: '🐳', category: 'infra' },
-  { name: 'Ansible', icon: '📡', category: 'infra' },
-  { name: 'Git', icon: '📂', category: 'infra' },
-  { name: 'Linux', icon: '🐧', category: 'infra' },
+  { name: 'JaCoCo / LCOV', icon: '📊', category: 'testing' },
+  { name: 'Jenkins CI/CD', icon: '🔧', category: 'infra' },
+  { name: 'Kubernetes / Docker', icon: '🐳', category: 'infra' },
+  { name: 'Git / GitHub', icon: '📂', category: 'infra' },
+  { name: 'MySQL / MongoDB', icon: '🗄️', category: 'infra' },
 ];
 
 export const interests: Interest[] = [
   {
+    name: { en: 'AI-Native Engineering', zh: 'AI 原生工程' },
+    icon: '🤖',
+    description: {
+      en: 'Building enterprise AI platforms with multi-LLM orchestration, agent memory systems, RAG pipelines, and AI-assisted development workflows',
+      zh: '构建企业 AI 平台，涵盖多 LLM 编排、智能体记忆系统、RAG 流水线和 AI 辅助开发工作流',
+    },
+  },
+  {
+    name: { en: 'Platform Architecture', zh: '平台架构' },
+    icon: '🏗️',
+    description: {
+      en: 'Cross-BU platform integration, service boundary design, API contracts, event-driven workflows, and distributed systems on Kubernetes',
+      zh: '跨业务单元平台集成、服务边界设计、API 契约、事件驱动工作流与 Kubernetes 上的分布式系统',
+    },
+  },
+  {
     name: { en: 'Chaos Engineering', zh: '混沌工程' },
     icon: '🌪️',
     description: {
-      en: 'Designing controlled fault-injection frameworks to validate system resilience and uncover hidden failure modes',
-      zh: '设计可控的故障注入框架，验证系统韧性并发现隐藏的失效模式',
+      en: 'Systematic fault injection on K8s clusters — node failure, slow disk, cascading failures — with SLO-driven recovery benchmarks',
+      zh: 'K8s 集群系统化故障注入 — 节点故障、慢盘、级联失败 — 配合 SLO 驱动的恢复基准',
     },
   },
   {
-    name: { en: 'AI-Augmented Testing', zh: 'AI 增强测试' },
-    icon: '🧠',
+    name: { en: 'Full-Stack Product Delivery', zh: '全栈产品交付' },
+    icon: '🚀',
     description: {
-      en: 'Leveraging LLMs and AI agents to automate test generation, log analysis, and root cause diagnosis',
-      zh: '利用大语言模型和 AI 智能体实现测试生成、日志分析和根因诊断的自动化',
-    },
-  },
-  {
-    name: { en: 'Distributed Storage Systems', zh: '分布式存储系统' },
-    icon: '💾',
-    description: {
-      en: 'Deep expertise in enterprise-scale object storage — data durability, recovery, tiering, and performance optimization',
-      zh: '企业级对象存储深度专长 — 数据持久性、恢复、分层存储与性能优化',
-    },
-  },
-  {
-    name: { en: 'Quality Transformation', zh: '质量转型' },
-    icon: '📈',
-    description: {
-      en: 'Shifting left with component-level testing, coverage-driven optimization, and continuous quality feedback loops',
-      zh: '通过组件级测试、覆盖率驱动优化和持续质量反馈循环推动测试左移',
+      en: 'End-to-end product ownership from domain modeling to consumer-facing delivery — WeChat Mini Programs, CLI tools, and hardware integrations',
+      zh: '从领域建模到面向消费者的产品交付 — 微信小程序、CLI 工具和硬件集成的端到端产品负责',
     },
   },
 ];
