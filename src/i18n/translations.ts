@@ -13,6 +13,7 @@ export const translations = {
       skills: 'Skills',
       projects: 'Projects',
       achievements: 'Achievements',
+      personal: 'Personal',
       contact: 'Contact',
     },
     hero: {
@@ -39,6 +40,11 @@ export const translations = {
       title: 'Achievements',
       subtitle: 'Key milestones across my career journey',
     },
+    personal: {
+      title: 'Beyond the Code',
+      quote: "I don't just build technology — I live the running lifestyle.",
+      body: 'Competitive amateur marathon runner. Marathon Copilot was born from my own training needs, combining engineering skills with a deep passion for the sport. I understand the runner\'s journey from first principles: periodization, race nutrition, pacing strategy, recovery science, and the data-driven pursuit of personal bests. Every line of code in that project comes from real miles on the road.',
+    },
     contact: {
       title: 'Get In Touch',
       subtitle: "Open to collaboration, speaking, and knowledge exchange",
@@ -58,6 +64,7 @@ export const translations = {
       skills: '技能',
       projects: '项目',
       achievements: '成就',
+      personal: '个人',
       contact: '联系',
     },
     hero: {
@@ -83,6 +90,11 @@ export const translations = {
     achievements: {
       title: '职业成就',
       subtitle: '职业旅程中的关键里程碑',
+    },
+    personal: {
+      title: '代码之外',
+      quote: '我不只是构建技术 — 我活在跑步的生活方式中。',
+      body: '业余竞技马拉松跑者。Marathon Copilot 诞生于我自己的训练需求，将工程能力与对跑步的热爱相融合。我从第一性原理理解跑者的旅程：周期化训练、比赛营养、配速策略、恢复科学，以及数据驱动的 PB 追求。项目中的每一行代码，都来自路上真实跑过的每一公里。',
     },
     contact: {
       title: '联系我',
