@@ -22,7 +22,7 @@ const { lang } = Astro.props;
         <article class="project-card">
           <div class="project-image">
             <div class="project-image-placeholder" data-index={i}>
-              <span class="placeholder-icon">{['🏃', '📊', '🎯', '🤖'][i]}</span>
+              <span class="placeholder-icon">{['🔧', '🛡️', '⚙️', '🏃', '📊', '🎯'][i]}</span>
             </div>
           </div>
           <div class="project-info">
@@ -116,6 +116,12 @@ const { lang } = Astro.props;
   }
   .project-image-placeholder[data-index="3"] {
     background: linear-gradient(135deg, #ebe6f0 0%, #d8cbea 100%);
+  }
+  .project-image-placeholder[data-index="4"] {
+    background: linear-gradient(135deg, #e4ecf0 0%, #cbdde8 100%);
+  }
+  .project-image-placeholder[data-index="5"] {
+    background: linear-gradient(135deg, #f0e8e4 0%, #e8d4cb 100%);
   }
 
   .project-info {

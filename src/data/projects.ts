@@ -11,6 +11,57 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: {
+      en: 'Agent Harness',
+      zh: 'Agent Harness — AI 辅助开发治理框架',
+    },
+    description: {
+      en: 'A structured framework for AI-assisted software development. 7 skills form a multi-role, governed pipeline — from vague idea to verified code — with quality gates and human checkpoints at every phase. Roles (Planner/Generator/Evaluator) are separated by contract; a machine-readable constitution prevents scope creep, unapproved changes, and missing tests. Tiered rule loading minimizes context window usage. All state lives in repo artifacts, not chat history.',
+      zh: '面向 AI 辅助开发的结构化治理框架。7 个技能组成多角色治理流水线 — 从模糊想法到经过验证的代码 — 每个阶段都有质量门禁和人工检查点。角色（规划者/生成者/评估者）通过契约分离；机器可读的治理宪章防止范围蔓延、未授权变更和缺失测试。分层规则加载最小化上下文窗口占用。所有状态存储在仓库文件中，而非聊天记录。',
+    },
+    tags: ['AI Framework', 'Multi-Role', 'Governance', 'Quality Gates', 'Harness Engineering'],
+    github: 'https://github.com/JieDannaChen/agent-harness',
+    image: '/images/project-harness.svg',
+    impact: {
+      en: '7-skill pipeline · Multi-role governance · Constitution-driven AI constraints',
+      zh: '7 技能流水线 · 多角色治理 · 宪章驱动的 AI 约束',
+    },
+  },
+  {
+    title: {
+      en: 'AI Quality Kit',
+      zh: 'AI Quality Kit — AI 代码质量工具集',
+    },
+    description: {
+      en: 'Quality assurance tools for AI-generated code. The Output Reviewer runs a 6-stage pipeline (content detection → intent alignment → security/completeness/performance checks → uncertainty analysis → constraint checks → structured report) against any AI output. The SAFER PR module standardizes AI-reviewer interactions with structured response prefixes (Acknowledgement/Investigation/Clarification/Concession/Alternative/Rebuttal) and pre-PR quality gates.',
+      zh: 'AI 生成代码的质量保障工具集。Output Reviewer 运行 6 阶段管线（内容检测 → 意图对齐 → 安全/完整性/性能检查 → 不确定性分析 → 约束检查 → 结构化报告）审查任何 AI 输出。SAFER PR 模块通过结构化响应前缀（确认/调查/澄清/让步/替代/反驳）和 PR 前置质量门禁，规范化 AI 与 Reviewer 的交互。',
+    },
+    tags: ['Code Review', 'SAFER Protocol', 'Quality Gates', 'Security Checks', 'AI Output'],
+    github: 'https://github.com/JieDannaChen/ai-quality-kit',
+    image: '/images/project-quality.svg',
+    impact: {
+      en: '6-stage review pipeline · SAFER response protocol · Project-specific constraints',
+      zh: '6 阶段审查管线 · SAFER 响应协议 · 项目级自定义约束',
+    },
+  },
+  {
+    title: {
+      en: 'Skill Kit',
+      zh: 'Skill Kit — AI 技能生态管理工具',
+    },
+    description: {
+      en: 'Management tools for AI skill registries. The Scorer maintains weight-based rankings (avg_rating + log2(usage) * 0.5) with auto-sync discovery — skills that get used more and rated higher naturally rise in priority. The Duplicate Checker uses description similarity (40%) + content cosine similarity (60%) to detect overlapping skills, with smart parent-child exclusion. Zero external dependencies.',
+      zh: 'AI 技能注册表的管理工具。Scorer 维护基于权重的排名（avg_rating + log2(usage) * 0.5），自动同步发现新技能 — 使用频率越高、评分越高的技能自然排名上升。Duplicate Checker 使用描述相似度（40%）+ 内容余弦相似度（60%）检测重叠技能，智能排除父子技能对。零外部依赖。',
+    },
+    tags: ['Skill Management', 'Ranking', 'Deduplication', 'Zero Dependencies', 'CLI'],
+    github: 'https://github.com/JieDannaChen/skill-kit',
+    image: '/images/project-skillkit.svg',
+    impact: {
+      en: 'Weight-based ranking · Similarity detection · Auto-sync discovery',
+      zh: '基于权重排名 · 相似度检测 · 自动同步发现',
+    },
+  },
+  {
+    title: {
       en: 'Marathon Copilot',
       zh: 'Marathon Copilot — 多 Agent 马拉松教练',
     },
@@ -59,18 +110,5 @@ export const projects: Project[] = [
       en: '4-phase agent pipeline · 6-factor scoring · Persona-based reasoning',
       zh: '4 阶段 Agent 流水线 · 6 因子评分 · 基于画像的推理',
     },
-  },
-  {
-    title: {
-      en: 'Alpha Agents',
-      zh: 'Alpha Agents — 多智能体协作框架',
-    },
-    description: {
-      en: 'A multi-agent orchestration framework for building autonomous, collaborative agent systems. Features task decomposition with DAG-based dependency resolution, shared memory and message-passing between agents, tool integration registry, and self-reflection with retry strategies. Designed to power complex workflows where multiple specialized agents coordinate toward a shared goal. (Coming soon)',
-      zh: '多智能体编排框架，用于构建自主协作的 Agent 系统。支持基于 DAG 的任务分解与依赖解析、Agent 间共享记忆与消息传递、工具集成注册表，以及带重试策略的自我反思机制。设计用于驱动多个专业化 Agent 协同达成共同目标的复杂工作流。（即将开源）',
-    },
-    tags: ['Multi-Agent', 'DAG Orchestration', 'Shared Memory', 'Tool Registry', 'Self-Reflection'],
-    github: 'https://github.com/JieDannaChen/alpha-agents',
-    image: '/images/project-agents.svg',
   },
 ];
