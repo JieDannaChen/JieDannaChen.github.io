@@ -10,29 +10,29 @@ const { lang } = Astro.props;
 const stats = [
   {
     value: '15+',
-    label: { en: 'Years of Experience', zh: '年从业经验' },
+    label: { en: 'Years of Experience', zh: '年技术经验' },
   },
   {
     value: '87',
-    label: { en: 'AI Skills Built', zh: '个 AI 技能构建' },
+    label: { en: 'AI Skills Built', zh: '个 AI 技能' },
   },
   {
     value: '200+',
-    label: { en: 'Engineers Served', zh: '人工程组织采用' },
+    label: { en: 'Engineers Served', zh: '名工程师在用' },
   },
   {
     value: '8',
-    label: { en: 'BUs Integrated', zh: '个业务单元集成' },
+    label: { en: 'BUs Integrated', zh: '个业务线打通' },
   },
 ];
 
 const milestones = [
   {
     icon: '🌟',
-    title: { en: 'Dell VP Annual Star Award', zh: 'Dell VP 年度之星奖' },
+    title: { en: 'Dell VP Annual Star Award', zh: 'Dell VP 年度之星' },
     desc: {
       en: 'VP Star Award (2023) for cross-BU platform integration excellence — led technical integration across 8 business units for a converged storage appliance',
-      zh: 'VP 年度之星奖（2023）— 主导跨 8 个业务单元的融合存储产品平台集成，卓越表现获高层表彰',
+      zh: '2023 年拿到 VP 年度之星 — 带着团队把 8 个业务单元的融合存储产品平台集成做成了',
     },
   },
   {
@@ -40,23 +40,23 @@ const milestones = [
     title: { en: 'Dell Hackathon Champion', zh: 'Dell 黑客松冠军' },
     desc: {
       en: 'Dell Hackathon Champion (2025) — exceptional creativity and technical execution in company-wide innovation competition',
-      zh: 'Dell 黑客松冠军（2025）— 在公司级创新竞赛中凭借杰出创意与技术执行力夺冠',
+      zh: '2025 年公司级黑客松拿了冠军，创意和落地能力都获得了评委认可',
     },
   },
   {
     icon: '🎤',
-    title: { en: 'QeCon Shanghai Speaker', zh: 'QeCon 上海演讲者' },
+    title: { en: 'QeCon Shanghai Speaker', zh: 'QeCon 上海大会讲师' },
     desc: {
       en: 'Delivered talk on Enterprise Platform Engineering Practices at QeCon Shanghai — China\'s premier software quality conference',
-      zh: '在 QeCon 上海大会（中国顶级软件质量大会）发表「企业级平台工程实践」主题演讲',
+      zh: '在 QeCon 上海（国内顶级软件质量大会）做了「企业级平台工程实践」的主题演讲',
     },
   },
   {
     icon: '🤖',
-    title: { en: 'Enterprise Agent Platform Architect', zh: '企业 Agent 平台架构师' },
+    title: { en: 'Enterprise Agent Platform Architect', zh: '企业 Agent 平台总架构师' },
     desc: {
       en: 'Architected autonomous agent platform: 87 skills with tool-use (Jira, Jenkins, GitHub, Slack, etc.), persistent vector memory (SQLite + sentence-transformer), and weighted skill routing',
-      zh: '主导构建自主 Agent 平台：87 个技能含工具调用（Jira、Jenkins、GitHub、Slack 等）、持久化向量记忆（SQLite + sentence-transformer）、加权技能路由',
+      zh: '从零搭起整个 Agent 平台：87 个技能打通 Jira、Jenkins、GitHub、Slack 等系统，带向量记忆和加权路由',
     },
   },
 ];
@@ -66,37 +66,37 @@ const career = [
     period: '2009 – 2010',
     role: { en: 'Lead Engineer', zh: '主管工程师' },
     org: { en: 'Giant Interactive Group', zh: '巨人网络' },
-    highlight: { en: 'SNS community platform & game portal, millions of DAU', zh: 'SNS 社区平台与游戏门户，百万级日活' },
+    highlight: { en: 'SNS community platform & game portal, millions of DAU', zh: '做 SNS 社区和游戏门户，百万日活' },
   },
   {
     period: '2010 – 2016',
     role: { en: 'Engineering Manager', zh: '工程经理' },
     org: { en: 'Dianping.com (now Meituan)', zh: '大众点评（现美团）' },
-    highlight: { en: '17-person team; transaction, merchant & payment systems; millions of DAU; API framework with 90% browser-free testing', zh: '17 人团队；交易、商户与支付系统；百万级日活；API 框架实现 90% 无浏览器测试' },
+    highlight: { en: '17-person team; transaction, merchant & payment systems; millions of DAU; API framework with 90% browser-free testing', zh: '带 17 人团队，管交易、商户和支付系统，百万日活；搞了一套 API 测试框架，90% 的测试不用开浏览器' },
   },
   {
     period: '2016 – 2017',
     role: { en: 'Engineering Director', zh: '工程总监' },
     org: { en: 'Full Truck Alliance / YMM (NYSE: YMM)', zh: '满帮集团 / 运满满（纽交所: YMM）' },
-    highlight: { en: 'Built 40-person team from zero; incidents -80%; deploy 3hrs → 15min', zh: '从零组建 40 人团队；线上事故减少 80%；部署 3 小时 → 15 分钟' },
+    highlight: { en: 'Built 40-person team from zero; incidents -80%; deploy 3hrs → 15min', zh: '从零拉起 40 人团队，线上事故降了 80%，发版从 3 小时压到 15 分钟' },
   },
   {
     period: '2017 – 2020',
     role: { en: 'Senior Architect', zh: '资深架构师' },
     org: { en: 'Dell EMC', zh: 'Dell EMC' },
-    highlight: { en: 'Built automation frameworks for global teams (US/China/India); regression cycle -40%', zh: '为全球团队（美/中/印）构建自动化框架；回归周期缩短 40%' },
+    highlight: { en: 'Built automation frameworks for global teams (US/China/India); regression cycle -40%', zh: '给中美印三地团队搭自动化框架，回归测试周期缩短 40%' },
   },
   {
     period: '2020 – 2022',
-    role: { en: 'Head of Engineering', zh: '研发团队负责人' },
+    role: { en: 'Head of Engineering', zh: '研发负责人' },
     org: { en: 'Banyumusic (Series A, SIG-led)', zh: '伴鱼音乐（A 轮，SIG 领投）' },
-    highlight: { en: 'Led R&D team; drove AI piano coaching product from design to launch; competitive analysis & risk control', zh: '负责研发团队搭建与管理；主导 AI 钢琴陪练产品落地；竞品分析与全流程风险把控' },
+    highlight: { en: 'Led R&D team; drove AI piano coaching product from design to launch; competitive analysis & risk control', zh: '搭团队、带研发，把 AI 钢琴陪练产品从方案推到上线，也管竞品分析和风险把控' },
   },
   {
     period: '2022 – Present',
     role: { en: 'Senior Principal Engineer', zh: '资深首席工程师' },
     org: { en: 'Dell Technologies', zh: 'Dell Technologies' },
-    highlight: { en: 'Autonomous agent platform (87 skills, tool-use, vector memory); cross-BU lead (8 BUs); VP Star Award; Hackathon Champion', zh: '自主 Agent 平台（87 技能、工具调用、向量记忆）；跨 BU 负责人（8 个 BU）；VP 之星奖；黑客松冠军' },
+    highlight: { en: 'Autonomous agent platform (87 skills, tool-use, vector memory); cross-BU lead (8 BUs); VP Star Award; Hackathon Champion', zh: '搭建 87 技能的 Agent 平台（工具调用 + 向量记忆），牵头 8 个业务线集成，VP 年度之星 + 黑客松冠军' },
   },
 ];
 ---

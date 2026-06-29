@@ -33,7 +33,7 @@ export const interests: Interest[] = [
     icon: '🤖',
     description: {
       en: 'Designing autonomous agent systems with tool-use, persistent vector memory, intelligent task routing, and multi-model orchestration — deployed at enterprise scale (87 skills, 200+ users)',
-      zh: '设计具备工具调用、持久化向量记忆、智能任务路由和多模型编排的自主 Agent 系统 — 已在企业规模部署（87 技能、200+ 用户）',
+      zh: '从零设计自主 Agent 系统 — 能调工具、有向量记忆、会智能路由任务、能编排多个大模型，已经在企业里跑起来了（87 个技能、200 多人在用）',
     },
   },
   {
@@ -41,7 +41,7 @@ export const interests: Interest[] = [
     icon: '🧪',
     description: {
       en: 'Building self-directed testing agents with autonomous plan-execute-observe loops, coverage-driven test generation, and intelligent termination strategies',
-      zh: '构建自驱动测试 Agent，具备自主「规划-执行-观察」闭环、覆盖率驱动测试生成和智能终止策略',
+      zh: '让 Agent 自己做测试 — 规划要测什么、执行测试、观察结果、不够就再来一轮，能根据覆盖率自动生成用例，还知道什么时候该停',
     },
   },
   {
@@ -49,7 +49,7 @@ export const interests: Interest[] = [
     icon: '🏗️',
     description: {
       en: 'Cross-BU platform integration (8 BUs), service boundary design, API contracts, event-driven workflows, and distributed systems on Kubernetes',
-      zh: '跨业务单元平台集成（8 个 BU）、服务边界设计、API 契约、事件驱动工作流与 Kubernetes 分布式系统',
+      zh: '做过 8 个业务单元的跨团队平台集成，对服务边界划分、API 契约设计、事件驱动架构和 K8s 上的分布式系统比较有体感',
     },
   },
   {
@@ -57,7 +57,7 @@ export const interests: Interest[] = [
     icon: '🌪️',
     description: {
       en: 'Systematic fault injection on K8s clusters — node failure, slow disk, cascading failures — with SLO-driven recovery benchmarks and quantified resilience metrics',
-      zh: 'K8s 集群系统化故障注入 — 节点故障、慢盘、级联失败 — 配合 SLO 驱动恢复基准与量化韧性指标',
+      zh: '在 K8s 集群上系统性地搞破坏 — 模拟节点挂掉、磁盘变慢、级联故障，然后量化恢复速度，用 SLO 基准衡量系统到底有多扛得住',
     },
   },
 ];

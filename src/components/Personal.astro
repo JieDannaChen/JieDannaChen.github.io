@@ -27,7 +27,10 @@ const { lang } = Astro.props;
           {t(lang, 'personal.body')}
         </p>
         <div class="personal-tags">
-          {['Periodization', 'Race Nutrition', 'Pacing Strategy', 'Recovery Science', 'Data-Driven PB'].map((tag) => (
+          {(lang === 'zh'
+            ? ['周期化训练', '比赛补给', '配速策略', '恢复调整', '用数据磨 PB']
+            : ['Periodization', 'Race Nutrition', 'Pacing Strategy', 'Recovery Science', 'Data-Driven PB']
+          ).map((tag) => (
             <span class="ptag">{tag}</span>
           ))}
         </div>
