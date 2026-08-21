@@ -12,7 +12,18 @@ const year = new Date().getFullYear();
 <footer class="footer">
   <div class="container footer-inner">
     <p class="footer-text">
-      &copy; {year} &middot; {t(lang, 'footer.builtWith')} Astro {t(lang, 'footer.and')} <span class="heart">&hearts;</span> {t(lang, 'footer.by')}
+      {
+        lang === 'zh' ? (
+          <span>
+            &copy; {year} &middot; 陈洁 &middot; 用 Astro <span class="heart">&hearts;</span> 搭建
+          </span>
+        ) : (
+          <span>
+            &copy; {year} &middot; {t(lang, 'footer.builtWith')} Astro {t(lang, 'footer.and')}{' '}
+            <span class="heart">&hearts;</span> {t(lang, 'footer.by')}
+          </span>
+        )
+      }
     </p>
   </div>
 </footer>

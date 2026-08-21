@@ -72,12 +72,12 @@ export const translations = {
       name: '陈洁 (Danna)',
       tagline: '首席工程师 · AI Agent 系统与平台架构',
       description:
-        '深耕软件工程 15 年，从中国互联网黄金期（美团点评、满帮集团）到 Dell Technologies 企业级分布式存储，一直在平台架构和质量工程两条线上走。在大众点评落地了 90% 无浏览器的 API 测试框架，在满帮把线上事故压了 80%，在 Dell 给三地团队搭自动化体系、回归周期缩短 40%。近几年一头扎进 AI Agent 领域：从零搭建了 87 技能的自主 Agent 平台，打通 10 多个内部系统，带向量记忆和智能路由，200 多名工程师在用；也做了自驱动测试 Agent 和多模型编排。VP 年度之星、黑客松冠军、QeCon 大会讲师。',
+        '深耕软件工程 15 年，从中国互联网黄金期（美团点评、满帮集团）到 Dell Technologies 企业级分布式存储，一直在平台架构和质量工程两条线上走。在大众点评把 API 测试框架做落地，九成测试不用开浏览器；在满帮把线上事故压了 80%；在 Dell 给三地团队搭自动化体系、回归周期缩短 40%。近几年一头扎进 AI Agent 领域：从零搭起 87 技能的自主 Agent 平台，打通 10 多个内部系统，带向量记忆和智能路由，200 多名工程师在用；也做了自驱动测试 Agent 和多模型编排。VP 年度之星、黑客松冠军、QeCon 大会讲师。',
       cta: '看看我做了什么',
     },
     skills: {
       title: '技能树',
-      subtitle: 'Agent 系统、平台架构，和日常用的技术栈',
+      subtitle: 'Agent 系统、平台架构，还有平时用的技术栈',
       technical: '技术栈',
       interests: '正在探索',
     },
@@ -98,7 +98,7 @@ export const translations = {
     },
     contact: {
       title: '找到我',
-      subtitle: '欢迎交流合作、技术分享',
+      subtitle: '想聊技术、聊合作，随时欢迎',
       email: '邮箱',
       github: 'GitHub',
       linkedin: 'LinkedIn',
