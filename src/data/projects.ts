@@ -11,6 +11,23 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: {
+      en: 'vLLM Benchmark',
+      zh: 'vLLM Benchmark — 推理快不快，数据说了算',
+    },
+    description: {
+      en: 'A performance regression toolkit for LLM inference serving, targeting vLLM\'s OpenAI-compatible API. Measures TTFT, TPOT, ITL percentiles (p50/p95/p99) and throughput over streaming SSE, in both sequential and concurrent modes. Every run is compared against a committed baseline; threshold breaches fail CI — baseline updates land only on main, PRs get comparison-only. A bundled mock OpenAI backend lets the full pipeline (baseline → benchmark → compare → report) run end-to-end without a GPU, plus A/B config comparison across batch sizes and serving setups. Also diagnosed and fixed a subtle measurement trap: requests.iter_lines() pre-buffers the socket, so tokens arrive in bursts and ITL percentiles collapse to ~0 — replaced with unbuffered http.client reads to restore true server pacing.',
+      zh: '给大模型推理服务做「性能体检」的工具，对着 vLLM 的 OpenAI 兼容接口跑。通过流式接口量出首 token 延迟、逐 token 间隔的 p50/p95/p99 和吞吐量，顺序、并发两种模式都支持。每次跑完和提交在仓库里的基线比，超阈值直接把 CI 卡红 —— 基线只允许 main 分支更新，PR 光对比不覆盖。自带 mock 推理后端，没 GPU 也能把整条流水线（建基线 → 跑分 → 对比 → 出报告）走通，还能跨 batch size、服务配置做 A/B 对比。开发中揪出一个隐蔽的测量坑：requests 的 iter_lines 会预读缓冲，token 一批批到达，逐 token 间隔直接坍缩到 0 —— 换成非缓冲的 http.client 读取，才还原了服务端真实节奏。',
+    },
+    tags: ['LLM Inference', 'vLLM', 'Performance', 'Regression Testing', 'CI/CD'],
+    github: 'https://github.com/JieDannaChen/vllm-benchmark',
+    image: '/images/project-benchmark.svg',
+    impact: {
+      en: 'TTFT/TPOT/ITL percentiles · Regression gates · GPU-free CI',
+      zh: 'TTFT/TPOT/ITL 百分位 · 回归门禁 · 没 GPU 也能跑 CI',
+    },
+  },
+  {
+    title: {
       en: 'Agent Harness',
       zh: 'Agent Harness — 让 AI 写代码也得守规矩',
     },
