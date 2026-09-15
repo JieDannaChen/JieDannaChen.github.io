@@ -19,20 +19,20 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       name: 'Danna Chen',
-      tagline: 'Principal Engineer · AI Agent Systems & Platform Architecture',
+      tagline: 'Principal Engineer · AI Quality Engineering & Agent Platform Architecture',
       description:
-        '15 years building globally scalable platforms — from China\'s internet hyper-growth (Meituan/Dianping, Full Truck Alliance) to enterprise distributed storage at Dell Technologies. Architected an autonomous AI agent platform (87 skills, tool-use across 10+ systems, persistent vector memory, intelligent task routing) adopted by 200+ engineers. Built self-directed testing agents and multi-model orchestration systems. VP Star Award & Hackathon Champion.',
+        '15 years in quality engineering and platform architecture — from China\'s internet hyper-growth (Meituan/Dianping, Full Truck Alliance) to enterprise distributed storage at Dell Technologies. Founded and architected a 96-skill enterprise AI agent platform with the Prompt-as-Orchestrator approach, growing from a QA tool to cross-departmental adoption by 200+ engineers. Built self-directed testing agents, flaky-test diagnosis systems, and multi-model LLM evaluation frameworks. Dell VP Star Award, Global Hackathon Champion, QeCon conference speaker.',
       cta: 'Explore My Work',
     },
     skills: {
       title: 'Skills & Expertise',
-      subtitle: 'Agent systems, platform architecture, and the tools I build with',
+      subtitle: 'AI quality engineering, agent architecture, and the tools I build with',
       technical: 'Technical Skills',
       interests: 'Areas of Exploration',
     },
     projects: {
-      title: 'AI Agent & Open Source Projects',
-      subtitle: 'Autonomous agents, multi-model orchestration, and self-directed testing systems',
+      title: 'AI Quality Engineering & Open Source Projects',
+      subtitle: 'Testing agents, LLM quality evaluation, and agent platform architecture — where AI meets quality engineering',
       viewCode: 'GitHub',
       viewDemo: 'Demo',
     },
@@ -70,20 +70,20 @@ export const translations = {
     hero: {
       greeting: '你好，我是',
       name: '陈洁 (Danna)',
-      tagline: '首席工程师 · AI Agent 系统与平台架构',
+      tagline: '首席工程师 · AI 质量工程与 Agent 平台架构',
       description:
-        '深耕软件工程 15 年，从中国互联网黄金期（美团点评、满帮集团）到 Dell Technologies 企业级分布式存储，一直在平台架构和质量工程两条线上走。在大众点评把 API 测试框架做落地，九成测试不用开浏览器；在满帮把线上事故压了 80%；在 Dell 给三地团队搭自动化体系、回归周期缩短 40%。近几年一头扎进 AI Agent 领域：从零搭起 87 技能的自主 Agent 平台，打通 10 多个内部系统，带向量记忆和智能路由，200 多名工程师在用；也做了自驱动测试 Agent 和多模型编排。VP 年度之星、黑客松冠军、QeCon 大会讲师。',
+        '15 年质量工程与平台架构经验，从互联网（美团点评、满帮集团）到 Dell Technologies 企业级分布式存储，一路在质量体系建设和平台架构两条线上深耕。近几年聚焦 AI 质量工程：作为发起者从零搭起 96 技能的企业级 AI Agent 平台，独创 Prompt-as-Orchestrator 架构，从 QA 工具起步发展为跨部门共用的平台，200 多名工程师日常使用。构建了自驱动测试 Agent、不稳定测试诊断系统、多模型 LLM 评测框架。Dell VP 年度之星、全球黑客松冠军、QeCon 大会演讲嘉宾。',
       cta: '看看我做了什么',
     },
     skills: {
       title: '技能树',
-      subtitle: 'Agent 系统、平台架构，还有平时用的技术栈',
+      subtitle: 'AI 质量工程、Agent 架构，还有平时用的技术栈',
       technical: '技术栈',
       interests: '正在探索',
     },
     projects: {
-      title: '开源项目',
-      subtitle: '自主 Agent、AI 代码质量、技能生态管理',
+      title: 'AI 质量工程与开源项目',
+      subtitle: '测试 Agent、LLM 质量评测、Agent 平台架构——当 AI 遇上质量工程',
       viewCode: 'GitHub',
       viewDemo: '演示',
     },
