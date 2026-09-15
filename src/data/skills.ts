@@ -38,7 +38,7 @@ export const interests: Interest[] = [
     icon: '🧪',
     description: {
       en: 'Building AI-powered testing agents, LLM output quality evaluation frameworks, and flaky-test diagnosis systems — making AI a force multiplier for quality, not a source of new problems',
-      zh: '构建 AI 驱动的测试 Agent、LLM 输出质量评测框架、不稳定测试诊断系统 — 让 AI 成为质量的放大器，而不是新问题的来源',
+      zh: '做 AI 驱动的测试 Agent、LLM 输出质量评测框架、不稳定测试诊断系统——目标是让 AI 成为质量的放大器，而不是新问题的制造者',
     },
   },
   {
@@ -46,7 +46,7 @@ export const interests: Interest[] = [
     icon: '🤖',
     description: {
       en: 'Founded and architected a 96-skill enterprise agent platform with the Prompt-as-Orchestrator approach. 3-tier skill model, 4 invocation patterns, constitutional governance, cross-team adoption',
-      zh: '发起并架构设计 96 技能的企业级 Agent 平台，独创 Prompt-as-Orchestrator 架构。三层技能模型、四种调用模式、宪法式治理、跨团队落地',
+      zh: '从零发起并主导架构了 96 技能的企业级 Agent 平台，自创 Prompt-as-Orchestrator 编排思路：三层技能模型、四种调用模式、宪法式治理，从单点工具推到跨部门落地',
     },
   },
   {
@@ -54,7 +54,7 @@ export const interests: Interest[] = [
     icon: '🌪️',
     description: {
       en: 'Systematic fault injection and chaos engineering on Kubernetes — 5 failure modes, fault-injection matrices, protocol-level root cause analysis, ELK/Prometheus observability stacks',
-      zh: 'Kubernetes 上系统化故障注入和混沌工程 — 5 类故障模式、故障注入矩阵、协议级根因分析、ELK/Prometheus 全栈可观测性',
+      zh: '基于 Kubernetes 的系统化故障注入与混沌工程：5 类故障模式、故障注入矩阵、协议级根因分析，搭配 ELK/Prometheus 全栈可观测性',
     },
   },
   {
@@ -62,7 +62,7 @@ export const interests: Interest[] = [
     icon: '🏗️',
     description: {
       en: 'Cross-BU test strategy (8 BUs unified), CI/CD pipeline consolidation, quality gate design, and test architecture for distributed systems — building quality into process, not just into code',
-      zh: '跨 BU 测试策略统一（8 个业务线）、CI/CD 流水线整合、质量门禁设计、分布式系统测试架构 — 质量不只是写进代码里，更是建进流程里',
+      zh: '统一 8 个业务线的测试策略、整合 CI/CD 流水线、设计质量门禁、构建分布式系统测试架构——质量不只是写进代码，更是嵌进流程',
     },
   },
 ];

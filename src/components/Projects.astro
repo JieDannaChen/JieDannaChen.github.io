@@ -7,6 +7,24 @@ interface Props {
 }
 
 const { lang } = Astro.props;
+
+// 每个项目对应一个语义化 SVG 图标（内联，避免依赖外部资源）
+const icons = [
+  // Coverage Robot — 齿轮+箭头（自动化闭环）
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/><circle cx="12" cy="12" r="4"/></svg>',
+  // AI Quality Kit — 盾牌打勾（质量保障）
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
+  // Agent Harness — 框架/结构（治理）
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h7v7h-7z"/></svg>',
+  // vLLM Benchmark — 闪电（性能）
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
+  // Skill Kit — 层叠卡片（管理）
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M7 7h14v14H7"/></svg>',
+  // AI Job Hunter — 罗盘（导航/匹配）
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>',
+  // Marathon Copilot — 跑步
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M9 20l3-6 3 4 3-1M6 13l3-3 4 2 2-3"/></svg>',
+];
 ---
 
 <section class="projects-section" id="projects">
@@ -22,7 +40,7 @@ const { lang } = Astro.props;
         <article class="project-card">
           <div class="project-image">
             <div class="project-image-placeholder" data-index={i}>
-              <span class="placeholder-icon">{['⚡', '🔧', '🛡️', '⚙️', '🏃', '📊', '🎯'][i]}</span>
+              <span class="placeholder-icon" set:html={icons[i]} />
             </div>
           </div>
           <div class="project-info">
@@ -68,7 +86,7 @@ const { lang } = Astro.props;
 
   .project-card {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 120px 1fr;
     gap: var(--space-md);
     background: var(--color-surface);
     border-radius: var(--radius-lg);
@@ -93,7 +111,7 @@ const { lang } = Astro.props;
 
   .project-image {
     height: 100%;
-    min-height: 220px;
+    min-height: 140px;
   }
 
   .project-image-placeholder {
@@ -102,29 +120,46 @@ const { lang } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3.5rem;
+  }
+
+  .placeholder-icon {
+    width: 44px;
+    height: 44px;
+    color: var(--color-accent);
+    opacity: 0.85;
+    transition: all var(--transition);
+  }
+
+  .placeholder-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-card:hover .placeholder-icon {
+    opacity: 1;
+    transform: scale(1.1);
   }
 
   .project-image-placeholder[data-index="0"] {
-    background: linear-gradient(135deg, #e8efe6 0%, #d4e4cf 100%);
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
   }
   .project-image-placeholder[data-index="1"] {
-    background: linear-gradient(135deg, #e6edf4 0%, #cfd9e8 100%);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   }
   .project-image-placeholder[data-index="2"] {
-    background: linear-gradient(135deg, #f0ebe4 0%, #e2d8cb 100%);
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
   }
   .project-image-placeholder[data-index="3"] {
-    background: linear-gradient(135deg, #ebe6f0 0%, #d8cbea 100%);
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   }
   .project-image-placeholder[data-index="4"] {
-    background: linear-gradient(135deg, #e4ecf0 0%, #cbdde8 100%);
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
   }
   .project-image-placeholder[data-index="5"] {
-    background: linear-gradient(135deg, #f0e8e4 0%, #e8d4cb 100%);
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
   }
   .project-image-placeholder[data-index="6"] {
-    background: linear-gradient(135deg, #f2eede 0%, #e6dcb8 100%);
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
   }
 
   .project-info {
@@ -228,7 +263,16 @@ const { lang } = Astro.props;
     }
 
     .project-image {
-      min-height: 160px;
+      min-height: 100px;
+    }
+
+    .project-image-placeholder {
+      padding: var(--space-sm) 0;
+    }
+
+    .placeholder-icon {
+      width: 36px;
+      height: 36px;
     }
 
     .project-info,

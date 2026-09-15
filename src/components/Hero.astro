@@ -33,16 +33,15 @@ const { lang } = Astro.props;
 
 <style>
   .hero {
-    min-height: 100vh;
+    padding: 120px 0 60px;
     display: flex;
     align-items: center;
-    padding-top: 80px;
   }
 
   .hero-content {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
     align-items: center;
   }
 
@@ -84,9 +83,9 @@ const { lang } = Astro.props;
   }
   .hero-desc {
     font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: var(--space-lg);
-    max-width: 50ch;
+    line-height: 1.75;
+    margin-bottom: var(--space-md);
+    max-width: 52ch;
   }
 
   .hero-cta {
@@ -108,7 +107,19 @@ const { lang } = Astro.props;
     background: var(--color-accent);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(74, 103, 65, 0.2);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+  }
+
+  .hero-cta--solid {
+    background: var(--color-accent);
+    color: white;
+    margin-left: 12px;
+  }
+
+  .hero-cta--solid:hover {
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    color: white;
   }
 
   .arrow {
@@ -142,15 +153,15 @@ const { lang } = Astro.props;
   }
 
   .avatar-placeholder {
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-bg-alt) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 700;
     color: var(--color-accent);
     box-shadow: var(--shadow-md);
@@ -167,9 +178,9 @@ const { lang } = Astro.props;
     .hero-visual { order: -1; }
 
     .avatar-placeholder {
-      width: 150px;
-      height: 150px;
-      font-size: 2.2rem;
+      width: 120px;
+      height: 120px;
+      font-size: 2rem;
     }
   }
 </style>

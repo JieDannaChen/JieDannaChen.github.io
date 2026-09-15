@@ -26,6 +26,10 @@ const otherLangPath = otherLang === 'en' ? '/' : '/zh/';
       <a href={otherLangPath} class="lang-switch" title={`Switch to ${languages[otherLang]}`}>
         {languages[otherLang]}
       </a>
+      <button class="theme-switch" aria-label="Toggle theme" id="themeToggle" title="Toggle dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
     </div>
 
     <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
@@ -59,7 +63,16 @@ const otherLangPath = otherLang === 'en' ? '/' : '/zh/';
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
-    transition: border-color var(--transition);
+    transition: border-color var(--transition), background var(--transition);
+  }
+
+  :root[data-theme="dark"] .navbar {
+    background: rgba(15, 17, 21, 0.85);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .navbar {
+      background: rgba(15, 17, 21, 0.85);
+    }
   }
 
   .navbar.scrolled {
@@ -133,6 +146,50 @@ const otherLangPath = otherLang === 'en' ? '/' : '/zh/';
     border-color: var(--color-accent);
   }
 
+  .theme-switch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+
+  .theme-switch:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  /* show sun in light mode, moon in dark mode */
+  .icon-moon { display: none; }
+  :root[data-theme="dark"] .icon-sun { display: none; }
+  :root[data-theme="dark"] .icon-moon { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .icon-sun { display: none; }
+    :root:not([data-theme="light"]) .icon-moon { display: block; }
+  }
+
+  .resume-btn {
+    padding: 5px 14px !important;
+    border: 1px solid var(--color-accent) !important;
+    border-radius: 20px !important;
+    color: var(--color-accent) !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    transition: all var(--transition) !important;
+  }
+
+  .resume-btn:hover {
+    background: var(--color-accent) !important;
+    color: white !important;
+  }
+
   .nav-toggle {
     display: none;
     flex-direction: column;
@@ -165,6 +222,15 @@ const otherLangPath = otherLang === 'en' ? '/' : '/zh/';
     flex-direction: column;
     gap: var(--space-sm);
     border-bottom: 1px solid var(--color-border-light);
+  }
+
+  :root[data-theme="dark"] .mobile-menu {
+    background: rgba(15, 17, 21, 0.98);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .mobile-menu {
+      background: rgba(15, 17, 21, 0.98);
+    }
   }
 
   .mobile-menu a {
@@ -236,5 +302,20 @@ const otherLangPath = otherLang === 'en' ? '/' : '/zh/';
   sectionIds.forEach((id) => {
     const el = document.getElementById(id);
     if (el) observer.observe(el);
+  });
+
+  // Theme toggle with localStorage persistence
+  const themeToggle = document.getElementById('themeToggle');
+  const storedTheme = localStorage.getItem('theme');
+  if (storedTheme) {
+    document.documentElement.setAttribute('data-theme', storedTheme);
+  }
+  themeToggle?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const isDark = current === 'dark'
+      || (!current && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const next = isDark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
   });
 </script>

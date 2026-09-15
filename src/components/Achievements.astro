@@ -18,11 +18,11 @@ const stats = [
   },
   {
     value: '200+',
-    label: { en: 'Engineers Served', zh: '名工程师在用' },
+    label: { en: 'Engineers Served', zh: '名工程师服务' },
   },
   {
     value: '8',
-    label: { en: 'BUs Unified on Test Strategy', zh: '个 BU 统一测试策略' },
+    label: { en: 'BUs Unified on Test Strategy', zh: '个业务线统一测试策略' },
   },
 ];
 
@@ -40,7 +40,7 @@ const milestones = [
     title: { en: 'Dell Hackathon Champion', zh: 'Dell 黑客松冠军' },
     desc: {
       en: 'Dell Hackathon Champion (2025) — exceptional creativity and technical execution in company-wide innovation competition',
-      zh: '2025 年拿下公司级黑客松冠军，创意和工程落地都被评委认可',
+      zh: '2025 年公司级黑客松冠军，创意与技术落地获评委认可',
     },
   },
   {
@@ -63,22 +63,16 @@ const milestones = [
 
 const career = [
   {
-    period: '2009 – 2010',
-    role: { en: 'Lead Engineer', zh: '主管工程师' },
-    org: { en: 'Giant Interactive Group', zh: '巨人网络' },
-    highlight: { en: 'SNS community platform & game portal, millions of DAU', zh: '做 SNS 社区和游戏门户，百万日活' },
+    period: '2022 – Present',
+    role: { en: 'Senior Principal Engineer', zh: '资深首席工程师' },
+    org: { en: 'Dell Technologies', zh: 'Dell Technologies' },
+    highlight: { en: 'Founded 96-skill AI agent platform (Prompt-as-Orchestrator); cross-BU integration testing lead; VP Star Award; Hackathon Champion; QeCon speaker', zh: '发起 96 技能 AI Agent 平台（Prompt-as-Orchestrator 架构），牵头跨 BU 集成测试；VP 年度之星、黑客松冠军、QeCon 演讲嘉宾' },
   },
   {
-    period: '2010 – 2016',
-    role: { en: 'Engineering Manager', zh: '工程经理' },
-    org: { en: 'Dianping.com (now Meituan)', zh: '大众点评（现美团）' },
-    highlight: { en: '17-person team; transaction, merchant & payment systems; millions of DAU; API framework with 90% browser-free testing', zh: '带 17 人团队，管交易、商户和支付系统，百万日活；搞了一套 API 测试框架，90% 的测试不用开浏览器' },
-  },
-  {
-    period: '2016 – 2017',
-    role: { en: 'Engineering Director', zh: '工程总监' },
-    org: { en: 'Full Truck Alliance / YMM (NYSE: YMM)', zh: '满帮集团 / 运满满（纽交所: YMM）' },
-    highlight: { en: 'Built 40-person team from zero; incidents -80%; deploy 3hrs → 15min', zh: '从零拉起 40 人团队，线上事故降了 80%，发版从 3 小时压到 15 分钟' },
+    period: '2020 – 2022',
+    role: { en: 'Head of Engineering', zh: '研发负责人' },
+    org: { en: 'Banyumusic (Series A, SIG-led)', zh: '伴鱼音乐（A 轮，SIG 领投）' },
+    highlight: { en: 'Led R&D team; drove AI piano coaching product from design to launch; competitive analysis & risk control', zh: '带领研发团队，推动 AI 钢琴陪练产品从设计到上线，负责竞品分析与风险把控' },
   },
   {
     period: '2017 – 2020',
@@ -87,16 +81,22 @@ const career = [
     highlight: { en: 'Built automation frameworks for global teams (US/China/India); regression cycle -40%', zh: '给中美印三地团队搭自动化框架，回归测试周期缩短 40%' },
   },
   {
-    period: '2020 – 2022',
-    role: { en: 'Head of Engineering', zh: '研发负责人' },
-    org: { en: 'Banyumusic (Series A, SIG-led)', zh: '伴鱼音乐（A 轮，SIG 领投）' },
-    highlight: { en: 'Led R&D team; drove AI piano coaching product from design to launch; competitive analysis & risk control', zh: '搭团队、带研发，把 AI 钢琴陪练产品从方案推到上线，也管竞品分析和风险把控' },
+    period: '2016 – 2017',
+    role: { en: 'Engineering Director', zh: '工程总监' },
+    org: { en: 'Full Truck Alliance / YMM (NYSE: YMM)', zh: '满帮集团 / 运满满（纽交所: YMM）' },
+    highlight: { en: 'Built 40-person team from zero; incidents -80%; deploy 3hrs → 15min', zh: '从零组建 40 人团队，线上事故减少 80%，发版时间从 3 小时缩短至 15 分钟' },
   },
   {
-    period: '2022 – Present',
-    role: { en: 'Senior Principal Engineer', zh: '资深首席工程师' },
-    org: { en: 'Dell Technologies', zh: 'Dell Technologies' },
-    highlight: { en: 'Founded 96-skill AI agent platform (Prompt-as-Orchestrator); cross-BU integration testing lead; VP Star Award; Hackathon Champion; QeCon speaker', zh: '发起 96 技能 AI Agent 平台（Prompt-as-Orchestrator 架构），牵头跨 BU 集成测试，VP 年度之星 + 黑客松冠军 + QeCon 演讲' },
+    period: '2010 – 2016',
+    role: { en: 'Engineering Manager', zh: '工程经理' },
+    org: { en: 'Dianping.com (now Meituan)', zh: '大众点评（现美团）' },
+    highlight: { en: '17-person team; transaction, merchant & payment systems; millions of DAU; API framework with 90% browser-free testing', zh: '带 17 人团队，负责交易、商户和支付系统，百万日活；自研 API 测试框架，90% 测试脱离浏览器依赖' },
+  },
+  {
+    period: '2009 – 2010',
+    role: { en: 'Lead Engineer', zh: '主管工程师' },
+    org: { en: 'Giant Interactive Group', zh: '巨人网络' },
+    highlight: { en: 'SNS community platform & game portal, millions of DAU', zh: '做 SNS 社区和游戏门户，百万日活' },
   },
 ];
 ---
@@ -223,7 +223,7 @@ const career = [
     border: 2.5px solid var(--color-accent);
   }
 
-  .timeline-item:last-child .timeline-dot {
+  .timeline-item:first-child .timeline-dot {
     background: var(--color-accent);
   }
 
