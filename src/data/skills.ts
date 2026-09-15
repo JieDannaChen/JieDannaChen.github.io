@@ -11,19 +11,24 @@ export interface Interest {
 }
 
 export const skills: Skill[] = [
+  { name: 'Agent Architecture', icon: '🤖', category: 'ai' },
+  { name: 'LLM Evaluation', icon: '🧠', category: 'ai' },
+  { name: 'Prompt-as-Orchestrator', icon: '🧩', category: 'ai' },
+  { name: 'RAG / Vector Memory', icon: '🔗', category: 'ai' },
+  { name: 'AI Test Generation', icon: '⚡', category: 'ai' },
+  { name: 'Multi-LLM Routing', icon: '🔀', category: 'ai' },
   { name: 'Python', icon: '🐍', category: 'language' },
   { name: 'Java', icon: '☕', category: 'language' },
   { name: 'JavaScript / Node.js', icon: '🟨', category: 'language' },
   { name: 'SQL', icon: '🗃️', category: 'language' },
   { name: 'Shell / Bash', icon: '💻', category: 'language' },
-  { name: 'Multi-LLM Orchestration', icon: '🧠', category: 'framework' },
-  { name: 'Agent Memory (RAG)', icon: '🔗', category: 'framework' },
-  { name: 'Prompt Engineering', icon: '✍️', category: 'framework' },
-  { name: 'Tool-Use / Function Calling', icon: '🔌', category: 'framework' },
+  { name: 'Chaos Engineering', icon: '🌪️', category: 'testing' },
+  { name: 'Flaky Test Diagnosis', icon: '🔍', category: 'testing' },
   { name: 'Robot Framework', icon: '🤖', category: 'testing' },
   { name: 'JaCoCo / LCOV', icon: '📊', category: 'testing' },
-  { name: 'Jenkins CI/CD', icon: '🔧', category: 'infra' },
   { name: 'Kubernetes / Docker', icon: '🐳', category: 'infra' },
+  { name: 'Jenkins CI/CD', icon: '🔧', category: 'infra' },
+  { name: 'ELK / Prometheus', icon: '📈', category: 'infra' },
   { name: 'Git / GitHub', icon: '📂', category: 'infra' },
 ];
 

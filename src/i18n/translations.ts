@@ -20,6 +20,7 @@ export const translations = {
       greeting: "Hi, I'm",
       name: 'Danna Chen',
       tagline: 'Principal Engineer · AI Quality Engineering & Agent Platform Architecture',
+      keywords: 'AI Testing  ·  Agent Architecture  ·  Cloud-Native Reliability',
       description:
         '15 years in quality engineering and platform architecture — from China\'s internet hyper-growth (Meituan/Dianping, Full Truck Alliance) to enterprise distributed storage at Dell Technologies. Founded and architected a 96-skill enterprise AI agent platform with the Prompt-as-Orchestrator approach, growing from a QA tool to cross-departmental adoption by 200+ engineers. Built self-directed testing agents, flaky-test diagnosis systems, and multi-model LLM evaluation frameworks. Dell VP Star Award, Global Hackathon Champion, QeCon conference speaker.',
       cta: 'Explore My Work',
@@ -28,7 +29,7 @@ export const translations = {
       title: 'Skills & Expertise',
       subtitle: 'AI quality engineering, agent architecture, and the tools I build with',
       technical: 'Technical Skills',
-      interests: 'Areas of Exploration',
+      focus: 'Core Focus',
     },
     projects: {
       title: 'AI Quality Engineering & Open Source Projects',
@@ -71,6 +72,7 @@ export const translations = {
       greeting: '你好，我是',
       name: '陈洁 (Danna)',
       tagline: '首席工程师 · AI 质量工程与 Agent 平台架构',
+      keywords: 'AI 测试  ·  Agent 架构  ·  云原生可靠性',
       description:
         '15 年质量工程与平台架构经验，从互联网（美团点评、满帮集团）到 Dell Technologies 企业级分布式存储，一路在质量体系建设和平台架构两条线上深耕。近几年聚焦 AI 质量工程：作为发起者从零搭起 96 技能的企业级 AI Agent 平台，独创 Prompt-as-Orchestrator 架构，从 QA 工具起步发展为跨部门共用的平台，200 多名工程师日常使用。构建了自驱动测试 Agent、不稳定测试诊断系统、多模型 LLM 评测框架。Dell VP 年度之星、全球黑客松冠军、QeCon 大会演讲嘉宾。',
       cta: '看看我做了什么',
@@ -79,7 +81,7 @@ export const translations = {
       title: '技能树',
       subtitle: 'AI 质量工程、Agent 架构，还有平时用的技术栈',
       technical: '技术栈',
-      interests: '正在探索',
+      focus: '核心方向',
     },
     projects: {
       title: 'AI 质量工程与开源项目',

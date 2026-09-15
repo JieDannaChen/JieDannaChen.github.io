@@ -14,6 +14,7 @@ const { lang } = Astro.props;
       <p class="hero-greeting animate-in">{t(lang, 'hero.greeting')}</p>
       <h1 class="hero-name animate-in delay-1">{t(lang, 'hero.name')}</h1>
       <p class="hero-tagline animate-in delay-2">{t(lang, 'hero.tagline')}</p>
+      <p class="hero-keywords animate-in delay-2">{t(lang, 'hero.keywords')}</p>
       <p class="hero-desc animate-in delay-3">{t(lang, 'hero.description')}</p>
       <a href="#projects" class="hero-cta animate-in delay-4">
         {t(lang, 'hero.cta')}
@@ -72,6 +73,15 @@ const { lang } = Astro.props;
     margin-bottom: var(--space-md);
   }
 
+  .hero-keywords {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+    font-family: var(--font-mono);
+  }
   .hero-desc {
     font-size: 1.05rem;
     line-height: 1.8;
