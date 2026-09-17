@@ -12,18 +12,18 @@ export const projects: Project[] = [
   {
     title: {
       en: 'Coverage Robot',
-      zh: 'Coverage Robot — 自己找活干的测试 Agent',
+      zh: 'Coverage Robot — 覆盖率驱动的测试工作流',
     },
     description: {
-      en: 'A self-directed testing agent that autonomously improves code coverage through a plan-execute-observe cycle. Parses JaCoCo/LCOV reports (3 formats, auto-detected), reasons about coverage gaps with P0-P3 priority classification, generates targeted Robot Framework E2E tests, executes them via Jenkins, and repeats until targets are met or diminishing returns detected. Integrates SSH, Jenkins API, and GitHub Enterprise for PR-targeted analysis. Reduces human analysis time by 95%.',
-      zh: '一个会自己找活干的测试 Agent。先读覆盖率报告（JaCoCo / LCOV，3 种格式自动识别），分析哪些代码没测到、按 P0-P3 排优先级，然后自动生成 Robot Framework E2E 测试用例，交由 Jenkins 执行，根据结果判断——未达标则再来一轮，直到达标或收益递减自动停止。人工分析时间省了 95%。集成 SSH、Jenkins API、GitHub，支持按 PR 维度分析。',
+      en: 'Reusable Python tooling for JaCoCo/LCOV analysis and coverage-driven Robot Framework workflows. It classifies gaps by P0-P3 priority, supports PR-targeted analysis and Jenkins execution, re-measures coverage iteratively, deduplicates gaps, and validates generated suites with dry-run checks and rule-based repair.',
+      zh: '可复用的 Python 覆盖率测试工具，支持 JaCoCo/LCOV 分析、P0-P3 缺口排序、按 PR 分析、Robot Framework 工作流与 Jenkins 执行。通过迭代式覆盖率回采和缺口去重跟踪结果，并用 Dry-run 校验与规则修复检查生成的测试套件。',
     },
-    tags: ['Testing Agent', 'Plan-Execute-Observe', 'Tool-Use', 'Jenkins', 'JaCoCo'],
+    tags: ['Coverage Analysis', 'Robot Framework', 'Jenkins', 'JaCoCo / LCOV', 'Dry-Run Validation'],
     github: 'https://github.com/JieDannaChen/cov2robot',
     image: '/images/project-coverage.svg',
     impact: {
-      en: 'Autonomous 5-phase loop · 95% faster · Self-terminating agent',
-      zh: '5 阶段自动闭环 · 省时 95% · 知道什么时候该停',
+      en: 'Coverage gap analysis · Test prioritization · Dry-run validation',
+      zh: '覆盖率缺口分析 · 测试优先级 · Dry-run 校验',
     },
   },
   {
@@ -32,15 +32,15 @@ export const projects: Project[] = [
       zh: 'AI Quality Kit — AI 写的代码，也要过质检',
     },
     description: {
-      en: 'Quality assurance tools for AI-generated code. The Output Reviewer runs a 6-stage pipeline (content detection → intent alignment → security/completeness/performance checks → uncertainty analysis → constraint checks → structured report) against any AI output. The SAFER PR module standardizes AI-reviewer interactions with structured response prefixes (Acknowledgement/Investigation/Clarification/Concession/Alternative/Rebuttal) and pre-PR quality gates.',
-      zh: '面向 AI 生成代码的质量保障工具集。Output Reviewer 运行一条 6 步管线：识别内容类型 → 比对需求意图 → 执行安全 / 完整性 / 性能检查 → 标出不确定项 → 检查项目自定义约束 → 输出结构化报告。SAFER PR 模块定义了 AI 与 Reviewer 之间的「对话协议」——确认、调查、澄清、让步、替代、反驳六种前缀，外加 PR 提交前的质量门禁。',
+      en: 'Rule-based checks and structured review workflows for AI-generated code. The Output Reviewer organizes content, intent, security, completeness, uncertainty, and project-constraint checks into a six-stage report. SAFER PR adds configurable pre-PR checks, structured reviewer responses, and explicit human-review checkpoints.',
+      zh: '面向 AI 生成代码的规则检查与结构化审阅工作流。Output Reviewer 将内容、意图、安全、完整性、不确定项和项目约束检查整理为六阶段报告；SAFER PR 提供可配置的 PR 前检查、结构化 Reviewer 响应及明确的人工复核环节。',
     },
-    tags: ['Code Review', 'SAFER Protocol', 'Quality Gates', 'Security Checks', 'AI Output'],
+    tags: ['Code Review', 'SAFER Protocol', 'PR Checks', 'Human Review', 'AI Output'],
     github: 'https://github.com/JieDannaChen/ai-quality-kit',
     image: '/images/project-quality.svg',
     impact: {
       en: '6-stage review pipeline · SAFER response protocol · Project-specific constraints',
-      zh: '6 步审查管线 · SAFER 对话协议 · 支持项目级自定义规则',
+      zh: '六阶段审阅 · SAFER 响应协议 · 项目级规则',
     },
   },
   {
@@ -49,15 +49,15 @@ export const projects: Project[] = [
       zh: 'Agent Harness — 让 AI 写代码也得守规矩',
     },
     description: {
-      en: 'A structured framework for AI-assisted software development. 7 skills form a multi-role, governed pipeline — from vague idea to verified code — with quality gates and human checkpoints at every phase. Roles (Planner/Generator/Evaluator) are separated by contract; a machine-readable constitution prevents scope creep, unapproved changes, and missing tests. Tiered rule loading minimizes context window usage. All state lives in repo artifacts, not chat history.',
-      zh: '一套为 AI 辅助开发设定治理边界的框架。7 个技能串成一条多角色流水线，从模糊需求到可验证代码，每一步都有质量关卡和人工确认点。规划、生成、评估三个角色按契约隔离，一份机器可读的「宪章」约束 AI 不擅自改、不漏测试、不偏离需求。规则按层级加载，尽量节省上下文窗口；所有状态保存在仓库文件中，不依赖聊天记录。',
+      en: 'A structured framework for AI-assisted software development. Seven skills form a multi-role workflow from planning to verified code, with role contracts, quality checks, and human checkpoints. Tiered rule loading controls context usage, while repository artifacts preserve state and review evidence.',
+      zh: '面向 AI 辅助开发的结构化框架。7 个技能组成从规划到代码验证的多角色工作流，通过角色契约、质量检查与人工确认点约束变更；规则分层加载以控制上下文用量，状态与审阅证据保存在仓库文件中。',
     },
     tags: ['AI Framework', 'Multi-Role', 'Governance', 'Quality Gates', 'Harness Engineering'],
     github: 'https://github.com/JieDannaChen/agent-harness',
     image: '/images/project-harness.svg',
     impact: {
-      en: '7-skill pipeline · Multi-role governance · Constitution-driven AI constraints',
-      zh: '7 技能流水线 · 多角色治理 · 宪章约束 AI 行为',
+      en: '7-skill workflow · Role contracts · Human checkpoints',
+      zh: '7 技能工作流 · 角色契约 · 人工确认点',
     },
   },
   {
@@ -66,15 +66,15 @@ export const projects: Project[] = [
       zh: 'vLLM Benchmark — 推理快不快，数据说了算',
     },
     description: {
-      en: 'A performance regression toolkit for LLM inference serving, targeting vLLM\'s OpenAI-compatible API. Measures TTFT, TPOT, ITL percentiles (p50/p95/p99) and throughput over streaming SSE, in both sequential and concurrent modes. Every run is compared against a committed baseline; threshold breaches fail CI — baseline updates land only on main, PRs get comparison-only. A bundled mock OpenAI backend lets the full pipeline run end-to-end without a GPU, plus A/B config comparison across batch sizes and serving setups.',
-      zh: '面向大模型推理服务的性能回归工具，对接 vLLM 的 OpenAI 兼容接口。通过流式接口采集首 token 延迟、逐 token 间隔的 p50/p95/p99 和吞吐量，支持顺序与并发两种模式。每次运行与仓库内提交的基线对比，超阈值则 CI 失败——基线仅在 main 分支更新，PR 分支只做对比不覆盖。自带 mock 推理后端，无 GPU 也能跑通整条流水线，还可跨 batch size、服务配置做 A/B 对比。',
+      en: 'A Python performance-testing prototype for OpenAI-compatible inference endpoints. It supports sequential and concurrent workloads, baseline and configuration comparisons, structured reports, and a bundled mock backend for GPU-free CI smoke tests.',
+      zh: '面向 OpenAI-compatible 推理接口的 Python 性能测试原型，支持串行与并发负载、基线与配置对比、结构化报告，并提供 Mock backend 完成无 GPU 的 CI 冒烟验证。',
     },
-    tags: ['LLM Inference', 'vLLM', 'Performance', 'Regression Testing', 'CI/CD'],
+    tags: ['LLM Inference', 'vLLM', 'Benchmark Prototype', 'Config Comparison', 'Mock CI'],
     github: 'https://github.com/JieDannaChen/vllm-benchmark',
     image: '/images/project-benchmark.svg',
     impact: {
-      en: 'TTFT/TPOT/ITL percentiles · Regression gates · GPU-free CI',
-      zh: 'TTFT/TPOT/ITL 百分位 · 回归门禁 · 没 GPU 也能跑 CI',
+      en: 'Performance-testing prototype · Config comparison · GPU-free smoke tests',
+      zh: '性能测试原型 · 配置对比 · 无 GPU 冒烟验证',
     },
   },
   {

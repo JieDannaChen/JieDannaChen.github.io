@@ -14,7 +14,7 @@ const { title, lang = 'en' } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jie Chen (Danna) - AI Enthusiast & Software Engineer" />
+    <meta name="description" content={lang === 'zh' ? '陈洁（Danna）— AI 质量工程、测试自动化与 Kubernetes 云原生可靠性' : 'Jie (Danna) Chen — AI quality engineering, test automation, and Kubernetes cloud-native reliability'} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

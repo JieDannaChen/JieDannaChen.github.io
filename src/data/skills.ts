@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   icon: string;
-  category: 'language' | 'framework' | 'testing' | 'infra';
+  category: 'ai' | 'language' | 'framework' | 'testing' | 'infra';
 }
 
 export interface Interest {
@@ -37,24 +37,24 @@ export const interests: Interest[] = [
     name: { en: 'AI Quality Engineering', zh: 'AI 质量工程' },
     icon: '🧪',
     description: {
-      en: 'Building AI-powered testing agents, LLM output quality evaluation frameworks, and flaky-test diagnosis systems — making AI a force multiplier for quality, not a source of new problems',
-      zh: '做 AI 驱动的测试 Agent、LLM 输出质量评测框架、不稳定测试诊断系统——目标是让 AI 成为质量的放大器，而不是新问题的制造者',
+      en: 'Building AI-assisted workflows for coverage-driven test generation, defect triage, evidence-backed RCA, and repeatable evaluation of LLM outputs',
+      zh: '构建 AI 辅助的覆盖率驱动测试生成、缺陷分诊、证据驱动 RCA 与可重复的 LLM 输出评估工作流',
     },
   },
   {
     name: { en: 'Agent Platform Architecture', zh: 'Agent 平台架构' },
     icon: '🤖',
     description: {
-      en: 'Founded and architected a 96-skill enterprise agent platform with the Prompt-as-Orchestrator approach. 3-tier skill model, 4 invocation patterns, constitutional governance, cross-team adoption',
-      zh: '从零发起并主导架构了 96 技能的企业级 Agent 平台，自创 Prompt-as-Orchestrator 编排思路：三层技能模型、四种调用模式、宪法式治理，从单点工具推到跨部门落地',
+      en: 'Founded and architected a 96-skill enterprise agent platform using Prompt-as-Orchestrator, structured evaluation, automated guardrails, and cross-team integrations',
+      zh: '从零发起并主导架构 96 技能的企业级 Agent 平台，采用 Prompt-as-Orchestrator、结构化评估、自动化门禁与跨团队系统集成',
     },
   },
   {
     name: { en: 'Cloud-Native Reliability', zh: '云原生可靠性' },
     icon: '🌪️',
     description: {
-      en: 'Systematic fault injection and chaos engineering on Kubernetes — 5 failure modes, fault-injection matrices, protocol-level root cause analysis, ELK/Prometheus observability stacks',
-      zh: '基于 Kubernetes 的系统化故障注入与混沌工程：5 类故障模式、故障注入矩阵、协议级根因分析，搭配 ELK/Prometheus 全栈可观测性',
+      en: 'Performance, soak, regression, and fault-injection testing for Kubernetes object storage, including Chaos Monkey testing, fault matrices, and ELK/Prometheus/Grafana-assisted RCA',
+      zh: '面向 Kubernetes 对象存储开展性能、长稳、回归与故障注入测试，包括 Chaos Monkey 测试、故障矩阵及基于 ELK/Prometheus/Grafana 的 RCA',
     },
   },
   {
@@ -62,7 +62,7 @@ export const interests: Interest[] = [
     icon: '🏗️',
     description: {
       en: 'Cross-BU test strategy (8 BUs unified), CI/CD pipeline consolidation, quality gate design, and test architecture for distributed systems — building quality into process, not just into code',
-      zh: '统一 8 个业务线的测试策略、整合 CI/CD 流水线、设计质量门禁、构建分布式系统测试架构——质量不只是写进代码，更是嵌进流程',
+      zh: '统一 8 个 BU 的测试策略、整合 CI/CD Pipeline、设计质量门禁并构建分布式系统测试架构，把质量要求落实到研发与发布流程',
     },
   },
 ];

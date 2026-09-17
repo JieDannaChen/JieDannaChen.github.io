@@ -20,10 +20,10 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       name: 'Danna Chen',
-      tagline: 'Principal Engineer · AI Quality Engineering & Agent Platform Architecture',
-      keywords: 'AI Testing  ·  Agent Architecture  ·  Cloud-Native Reliability  ·  vLLM Benchmark',
+      tagline: 'Senior AI Quality Engineer / SDET',
+      keywords: 'AI-Assisted Testing  ·  Test Automation  ·  Cloud-Native Reliability  ·  Quality Platforms',
       description:
-        '15 years in quality engineering and platform architecture — from China\'s internet hyper-growth (Meituan/Dianping, Full Truck Alliance) to enterprise distributed storage at Dell Technologies. Founded and architected a 96-skill enterprise AI agent platform with the Prompt-as-Orchestrator approach, growing from a QA tool to cross-departmental adoption by 200+ engineers. Built self-directed testing agents, flaky-test diagnosis systems, and multi-model LLM evaluation frameworks.',
+        '15+ years in software quality engineering, including 8+ years focused on testing Kubernetes-based enterprise object storage and the last 3 years applying AI to QA. I build Python workflows for coverage-driven test generation, defect triage, and evidence-backed RCA, and have led test strategy, automation, fault-injection, reliability, and CI/CD programs for distributed systems. My work includes a 96-skill enterprise AI agent platform and an integration-test strategy spanning 8 BUs.',
       cta: 'Explore My Work',
       resume: 'Download Resume',
     },
@@ -41,7 +41,7 @@ export const translations = {
     },
     achievements: {
       title: 'Achievements',
-      subtitle: 'Key milestones across 15 years of quality engineering',
+      subtitle: 'Key milestones across 15+ years of quality engineering',
     },
     personal: {
       title: 'Beyond the Code',
@@ -74,10 +74,10 @@ export const translations = {
     hero: {
       greeting: '你好，我是',
       name: '陈洁（Danna）',
-      tagline: '首席工程师 · AI 质量工程与 Agent 平台架构',
-      keywords: 'AI 测试  ·  Agent 架构  ·  云原生可靠性  ·  vLLM Benchmark',
+      tagline: '高级 AI 质量工程师 / SDET',
+      keywords: 'AI 辅助测试  ·  测试自动化  ·  云原生可靠性  ·  质量平台',
       description:
-        '15 年质量工程与平台架构经验，横跨中国互联网的高速增长期（美团点评、满帮集团）和 Dell Technologies 的企业级分布式存储。近几年专注 AI 质量工程：从零搭建一套 96 技能的企业级 Agent 平台，独创 Prompt-as-Orchestrator 编排思路，从一个 QA 工具成长为 200 多人日常依赖的跨部门平台。同时构建了自驱动测试 Agent、不稳定测试诊断系统、多模型 LLM 评测框架，覆盖 AI 在质量工作中的多个落地场景。',
+        '15 年以上软件质量工程经验，其中 8 年以上专注于 Kubernetes 企业级对象存储测试，最近 3 年专注于 AI 赋能的质量工程。基于 Python 构建覆盖率驱动的测试生成、缺陷分诊和证据驱动 RCA 工作流，并负责分布式系统的测试策略、自动化、故障注入、可靠性与 CI/CD。代表性工作包括 96 技能的企业级 AI Agent 平台，以及覆盖 8 个 BU 的集成测试策略。',
       cta: '看看我做了什么',
     },
     skills: {
@@ -94,7 +94,7 @@ export const translations = {
     },
     achievements: {
       title: '职业履历',
-      subtitle: '十五年质量工程的关键里程碑',
+      subtitle: '十五年以上质量工程的关键里程碑',
     },
     personal: {
       title: '代码之外',

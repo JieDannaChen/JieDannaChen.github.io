@@ -14,7 +14,7 @@ A minimalist, elegant personal portfolio built with [Astro](https://astro.build/
 
 - **Hero** - Personal introduction with avatar
 - **Skills & Interests** - Technical skills and AI exploration areas
-- **AI Projects** - Showcase of 3 AI projects
+- **AI Projects** - Selected AI quality engineering and agent projects
 - **Contact** - Email, GitHub, LinkedIn links
 
 ## Getting Started

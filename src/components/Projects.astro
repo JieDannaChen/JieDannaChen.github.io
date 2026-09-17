@@ -25,6 +25,13 @@ const icons = [
   // Marathon Copilot — 跑步
   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M9 20l3-6 3 4 3-1M6 13l3-3 4 2 2-3"/></svg>',
 ];
+
+// Keep the NVIDIA-relevant projects first while retaining each project's icon.
+const projectOrder = [0, 1, 3, 2, 4, 5, 6];
+const displayedProjects = projectOrder.map((projectIndex) => ({
+  project: projects[projectIndex],
+  icon: icons[projectIndex],
+}));
 ---
 
 <section class="projects-section" id="projects">
@@ -36,11 +43,11 @@ const icons = [
     </div>
 
     <div class="projects-list">
-      {projects.map((project, i) => (
+      {displayedProjects.map(({ project, icon }, i) => (
         <article class="project-card">
           <div class="project-image">
             <div class="project-image-placeholder" data-index={i}>
-              <span class="placeholder-icon" set:html={icons[i]} />
+              <span class="placeholder-icon" set:html={icon} />
             </div>
           </div>
           <div class="project-info">
